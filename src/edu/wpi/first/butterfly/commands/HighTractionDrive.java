@@ -14,10 +14,12 @@ public class HighTractionDrive extends CommandBase {
     public HighTractionDrive() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+        requires(drivetrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        //Fire the pneumatic cylinders
     }
 
     // Called repeatedly when this Command is scheduled to run

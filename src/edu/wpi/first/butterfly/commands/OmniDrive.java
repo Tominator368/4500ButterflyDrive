@@ -12,12 +12,12 @@ package edu.wpi.first.butterfly.commands;
 public class OmniDrive extends CommandBase {
     
     public OmniDrive() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+        requires(drivetrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        //No need, omni is default (pneumatic cylinders not fired)
     }
 
     // Called repeatedly when this Command is scheduled to run
