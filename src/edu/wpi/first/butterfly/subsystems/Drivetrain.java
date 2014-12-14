@@ -212,6 +212,17 @@ public class Drivetrain extends Subsystem {
 		}
 	}
 	
+        /**
+         * Projects this vector onto another vector
+         * @param other
+         * @return 
+         */
+        public Vector projectOnto(Vector other){
+            Vector normalizedOther = other.normalize();
+            
+            return normalizedOther.scale(dot(normalizedOther));
+        }
+        
 	public String toString(){
 		return "<"+x+", "+y+", "+z+">";
 	}
