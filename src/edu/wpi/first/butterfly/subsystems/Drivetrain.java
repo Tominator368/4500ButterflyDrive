@@ -206,7 +206,7 @@ public class Drivetrain extends Subsystem {
 		double sign = signum(cross(other).getZ()); //the sign of the cross product - will be zero if the vectors are paralell
 		
 		if(sign!=0){
-			return  sign*getAngleBetween(other);
+			return  2*Math.PI - sign*getAngleBetween(other);
 		}else{
 			return getAngleBetween(other);
 		}
