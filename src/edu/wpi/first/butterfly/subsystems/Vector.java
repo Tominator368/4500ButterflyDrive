@@ -12,7 +12,7 @@ import com.sun.squawk.util.MathUtils;
  *
  * @author IED
  */
-public class Vector extends Drivetrain {
+ public class Vector {
     public final Vector zero = new Vector(0,0,0);
 	
 	private final double x,y,z;
@@ -162,16 +162,16 @@ public class Vector extends Drivetrain {
 	}
 	
         /**
-         * This is a function to replace java.lang.Math.signum because it 
+         * Function to replace java.lang.Math.signum because it 
          * doesn't work in the FRC package.
-         * @param f
+         * @param d
          * @return 
          */
-        public double signum(double  f) {
-            if (f > 0) {
+        private double signum(double  d) {
+            if (d > 0) {
                 return 1.0;
             }
-            if (f < 0) {
+            else if (d < 0) {
                 return -1.0;
             }
             else {

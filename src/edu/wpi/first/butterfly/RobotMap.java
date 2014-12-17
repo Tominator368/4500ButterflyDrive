@@ -7,13 +7,21 @@ package edu.wpi.first.butterfly;
  * floating around.
  */
 public class RobotMap {
-    // For example to map the left and right motors, you could define the
-    // following variables to use with your drivetrain subsystem.
-    // public static final int leftMotor = 1;
-    // public static final int rightMotor = 2;
     
-    // If you are using multiple modules, make sure to define both the port
-    // number and the module. For example you with a rangefinder:
-    // public static final int rangefinderPort = 1;
-    // public static final int rangefinderModule = 1;
+    //Sidecar motor ports
+    public static final int
+            flMotorPort = 1,
+            frMotorPort = 2,
+            blMotorPort = 3,
+            brMotorPort = 4,
+            fmMotorPort = 5,
+            bmMotorPort = 6;
+    
+    //Analog breakout ports
+    public static final int
+            gyroPort = 1;
+    
+    
+    public static final double gyroSensitivity = 1; //To be set per the instructions on the gyro
+
 }

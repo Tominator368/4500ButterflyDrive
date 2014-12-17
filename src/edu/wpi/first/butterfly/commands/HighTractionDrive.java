@@ -20,6 +20,7 @@ public class HighTractionDrive extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() {
         //TODO: Fire the pneumatic cylinders
+        
     }
 
     // Called repeatedly when this Command is scheduled to run

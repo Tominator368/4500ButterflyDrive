@@ -17,7 +17,7 @@ public class OmniDrive extends CommandBase {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-        //No need, omni is default (pneumatic cylinders not fired)
+        drivetrain.initializeGyro();
     }
 
     // Called repeatedly when this Command is scheduled to run
