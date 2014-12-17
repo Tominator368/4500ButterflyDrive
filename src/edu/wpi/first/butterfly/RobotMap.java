@@ -26,7 +26,7 @@ public class RobotMap {
     
     public static final double gyroSensitivity = 1; //To be set per the instructions on the gyro
     
-    public static final Vector                      //TODO: need to actually measure and set this properly
+    public static Vector                      //TODO: need to actually measure and set this properly
             flWheelPosition = new Vector(-1, 1, 0),
             frWheelPosition = new Vector(1, 1, 0),
             blWheelPosition = new Vector(-1, -1, 0),
@@ -34,7 +34,7 @@ public class RobotMap {
             fmWheelPosition = new Vector(0, 1, 0),
             bmWheelPosition = new Vector(0, -1, 0);
     
-    public static final Vector                      //TODO: determine the actual directions that the wheels face particularly the fm and rm wheels
+    public static Vector                      //TODO: determine the actual directions that the wheels face particularly the fm and rm wheels
             flWheelDirection = new Vector(0, 1, 0),
             frWheelDirection = new Vector(0, 1, 0),
             blWheelDirection = new Vector(0, 1, 0),

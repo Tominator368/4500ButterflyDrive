@@ -35,21 +35,7 @@ public class OmniWheel {
         //v_controller = null;            //this wheel uses a talon controller
     }
     
-    /**
-     * 
-     * @param position  Represents the position of the wheel with respect to the center of the robot
-     * @param direction Represents the direction that the wheel faces
-     * @param controller Is the talon/victor that represents the motor controller
-     */
-    /*
-    public OmniWheel(Vector position, Vector direction, Victor controller){
-        this.position = position;
-        this.direction = direction.normalize();
-        
-        v_controller = controller;
-        
-        t_controller = null;            //this wheel uses a victor controller
-    }*/
+    
     
     
     public double getRequiredSpeed(Vector linear, Vector angular){

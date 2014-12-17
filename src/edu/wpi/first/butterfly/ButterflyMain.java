@@ -35,6 +35,27 @@ public class ButterflyMain extends IterativeRobot {
 
         // Initialize all subsystems
         CommandBase.init();
+        
+        double [] lengths = {
+            RobotMap.flWheelPosition.magnitude(),  
+            RobotMap.frWheelPosition.magnitude(),  
+            RobotMap.blWheelPosition.magnitude(),  
+            RobotMap.brWheelPosition.magnitude(),  
+            RobotMap.fmWheelPosition.magnitude(),  
+            RobotMap.bmWheelPosition.magnitude()
+        };
+        double maximumLength = 0;
+        for(int i = 0;i<lengths.length;i++){
+            maximumLength = Math.max(maximumLength, lengths[i]);
+        }
+        
+        RobotMap.flWheelPosition = RobotMap.flWheelPosition.scale(1/maximumLength);
+        RobotMap.frWheelPosition = RobotMap.frWheelPosition.scale(1/maximumLength);
+        RobotMap.blWheelPosition = RobotMap.blWheelPosition.scale(1/maximumLength);
+        RobotMap.brWheelPosition = RobotMap.brWheelPosition.scale(1/maximumLength);
+        RobotMap.fmWheelPosition = RobotMap.fmWheelPosition.scale(1/maximumLength);
+        RobotMap.bmWheelPosition = RobotMap.bmWheelPosition.scale(1/maximumLength);
+        
     }
 
     public void autonomousInit() {
