@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package edu.wpi.first.butterfly;
+package edu.wpi.first.butterfly.subsystems;
 
 import edu.wpi.first.butterfly.subsystems.Vector;
 import edu.wpi.first.wpilibj.Talon;

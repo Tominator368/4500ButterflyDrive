@@ -5,7 +5,7 @@
  */
 package edu.wpi.first.butterfly.commands;
 
-import edu.wpi.first.butterfly.OmniWheel;
+import edu.wpi.first.butterfly.subsystems.OmniWheel;
 import edu.wpi.first.butterfly.RobotMap;
 import edu.wpi.first.butterfly.subsystems.Vector;
 
