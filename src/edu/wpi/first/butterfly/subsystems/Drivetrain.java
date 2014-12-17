@@ -5,7 +5,6 @@
  */
 package edu.wpi.first.butterfly.subsystems;
 
-import com.sun.squawk.util.MathUtils;
 import edu.wpi.first.butterfly.RobotMap;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.Talon;
@@ -26,6 +25,8 @@ public class Drivetrain extends Subsystem {
     Talon brMotor = new Talon(RobotMap.brMotorPort);
     Victor fmMotor = new Victor(RobotMap.fmMotorPort);
     Victor bmMotor = new Victor(RobotMap.bmMotorPort);
+    
+    
     
     private double forwardAngle; //Angle defined as being "forward" upon initializing the gyro
                                  //e.g. zeroing out the gyro
@@ -63,6 +64,9 @@ public class Drivetrain extends Subsystem {
         bmMotor.set(speed);
     }
     
+    public double getRobotFacingAngle(){
+        return roboGyro.getAngle();
+    }
     //All the vector crap using input from the joystick (oi.joyX, Y, and Z) goes here :)
     //Ultimately, this will use the setSpeed functions above to actually move the robot
     public void omniDrive() {
