@@ -6,6 +6,7 @@
 package edu.wpi.first.butterfly.subsystems;
 
 import edu.wpi.first.butterfly.RobotMap;
+import edu.wpi.first.butterfly.commands.OmniDrive;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.Victor;
@@ -30,13 +31,8 @@ public class Drivetrain extends Subsystem {
     
     private double forwardAngle; //Angle defined as being "forward" upon initializing the gyro
                                  //e.g. zeroing out the gyro
-    
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
-
     public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+        setDefaultCommand(new OmniDrive());
     }
     
     Vector robot = new Vector(0, 0, 0);
@@ -56,7 +52,6 @@ public class Drivetrain extends Subsystem {
         frMotor.set(speed);
         brMotor.set(speed);
     }
-    //The front and back ones aren't exactly necessary, I just put them in for consistancy
     public void setFrontSpeed(double speed) { 
         fmMotor.set(speed);
     }
@@ -67,11 +62,11 @@ public class Drivetrain extends Subsystem {
     public double getRobotFacingAngle(){
         return roboGyro.getAngle();
     }
-    //All the vector crap using input from the joystick (oi.joyX, Y, and Z) goes here :)
+    //All the vector stuff using input from the joystick (oi.joyX, Y, and Z) goes here :)
     //Ultimately, this will use the setSpeed functions above to actually move the robot
-    public void omniDrive() {
+    /*public void omniDrive() {
         
-    }
+    }*/ //Edit: Or maybe not...
     
     
     /**
