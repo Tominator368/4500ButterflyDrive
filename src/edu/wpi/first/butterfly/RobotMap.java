@@ -24,7 +24,7 @@ public class RobotMap {
             gyroPort = 1;
     
     
-    public static final double gyroSensitivity = 1; //To be set per the instructions on the gyro
+    public static final double gyroSensitivity = .007; // 7mV/degree/second
     
     public static Vector                      //TODO: need to actually measure and set this properly
             flWheelPosition = new Vector(-1, 1, 0),

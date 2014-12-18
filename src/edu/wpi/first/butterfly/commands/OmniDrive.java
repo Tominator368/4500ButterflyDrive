@@ -25,14 +25,11 @@ public class OmniDrive extends CommandBase {
 
     public OmniDrive() {
         requires(drivetrain);
-        
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
         drivetrain.initializeGyro();
-        
-        
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -40,11 +37,11 @@ public class OmniDrive extends CommandBase {
         Vector linear = new Vector(oi.joyX(), oi.joyY(), 0);
         
         
-        //temporarily removed gyro stuff while i check if it is in degrees or radians
-        /*double angle = drivetrain.getRobotFacingAngle();
+        //Aditya - It's in degrees, I made it convert to radians
+        double angle = ((Math.PI/180)*drivetrain.getRobotFacingAngle());
         
         linear = linear.rotateAboutZAxis(-angle);               //convert the angle of the input to the angle in the robot reference frame
-        */
+        
         Vector angular = new Vector(0, 0, oi.joyZ());
         
         drivetrain.setLeftSpeed(flWheel.getRequiredSpeed(linear, angular));     //sets all the speeds I think that the two wheels don't matter?
